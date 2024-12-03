@@ -4,7 +4,7 @@ $sp = $_POST['sp'];
 $gt = $_POST['price'];
 $id = $_POST['sid'];
 //kết nối csdl
-require_once 'connect.php';
+require_once(__DIR__ . '/../models/connect.php');
 
 $updatesql = "UPDATE btvn1 SET sp='$sp', price= '$gt' WHERE id=$id";
 

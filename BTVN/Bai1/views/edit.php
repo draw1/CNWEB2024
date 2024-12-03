@@ -2,7 +2,7 @@
 
 $id = $_GET['sid'];
 
-require_once 'connect.php';
+require_once(__DIR__ . '/../models/connect.php');
 
 $edit_sql = "SELECT * FROM btvn1 WHERE id=$id";
 

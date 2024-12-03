@@ -65,7 +65,7 @@
       </thead>
       <tbody>
         <?php
-        require_once 'connect.php';
+        require_once(__DIR__ . '/../models/connect.php');
 
         $list_sql = "SELECT * FROM btvn1 order by sp, price";
 

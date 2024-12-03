@@ -3,7 +3,7 @@
 $sp = $_POST['sp'];
 $gt = $_POST['price'];
 //kết nối csdl
-require_once 'connect.php';
+require_once(__DIR__ . '/../models/connect.php');
 
 $addsql = "INSERT INTO btvn1
 (sp, price) VALUES ('$sp','$gt')";
