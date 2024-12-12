@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('issues', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('computer_id');
+            $table->string('reported_by', 50);
+            $table->date('reported_date');
+            $table->text('description');
+            $table->enum('urgency', ['Low', 'Medium', 'High']);
+            $table->enum('status', ['Open', 'In Progress', 'Resolved']);
+            $table->foreign('computer_id')->references('id')->on('computers')->onDelete('cascade');
             $table->timestamps();
         });
     }
